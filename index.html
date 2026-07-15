@@ -14,13 +14,26 @@
     <style>
       body{
         padding-top: 70px;
-      }  
+      }
+
+      .carousel-item::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.45);
+      }
+
+      .carousel-caption {
+        z-index: 2;
+      }
     </style>
 </head>
 
 <body>
 
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"></nav> -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="/aitoolbootstrap/">aITools</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -51,7 +64,6 @@
                             href="https://www.geeksforgeeks.org/artificial-intelligence/artificial-intelligence-in-robotics/">Robotics</a>
                         <a class="dropdown-item" href="https://www.ibm.com/think/topics/deep-learning">Deep Learning</a>
                         <div class="dropdown-divider"></div>
-                        <!-- <a class = "dropdow-item" href = "">Explore More</a> -->
                         <a class="dropdown-item"
                             href="https://medium.com/@manishachaudhary_43386/topics-in-artificial-intelligence-complete-guide-c5a14c9af8d3">Explore
                             More</a>
@@ -61,7 +73,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/aitoolbootstrap/contact.html">Contact Us</a>
                 </li>
-
 
             </ul>
             <form class="form-inline my-2 my-lg-0 position-relative" onsubmit="return searchPage()">
@@ -75,8 +86,6 @@
                     Search
                 </button>
             </form>
-
-            <!-- <p id="noResult" style="color:red; margin-top:10px;"></p> -->
 
             <div class="mx-2">
                 <button class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Login</button>
@@ -170,6 +179,7 @@
             </div>
         </div>
     </div>
+
     <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -182,11 +192,11 @@
                 <div class="carousel-caption d-none d-md-block">
                     <h2>Welcome to aITools</h2>
                     <p>Technology and Development</p>
-                    <button class="btn btn-primary"><a href="https://www.ibm.com/think/topics/machine-learning"
+                    <button class="btn btn-outline-light"><a href="https://www.ibm.com/think/topics/machine-learning"
                             style='color: white'>Machine Learning</a></button>
-                    <button class="btn btn-danger"><a href="https://www.geeksforgeeks.org/artificial-intelligence/artificial-intelligence-in-robotics/"
+                    <button class="btn btn-outline-light"><a href="https://www.geeksforgeeks.org/artificial-intelligence/artificial-intelligence-in-robotics/"
                             style='color:white'>Robotics</a></button>
-                    <button class="btn btn-info"><a href="https://www.ibm.com/think/topics/deep-learning"
+                    <button class="btn btn-outline-light"><a href="https://www.ibm.com/think/topics/deep-learning"
                             style='color:white'>Deep Learning</a></button>
                 </div>
             </div>
@@ -196,12 +206,12 @@
 
                 <div class="carousel-caption d-none d-md-block">
                     <h2>Technology and Development</h2>
-                    
-                    <button class="btn btn-primary"><a href="https://www.ibm.com/think/topics/machine-learning"
+
+                    <button class="btn btn-outline-light"><a href="https://www.ibm.com/think/topics/machine-learning"
                             style='color: white'>Machine Learning</a></button>
-                    <button class="btn btn-danger"><a href="https://www.geeksforgeeks.org/artificial-intelligence/artificial-intelligence-in-robotics/"
+                    <button class="btn btn-outline-light"><a href="https://www.geeksforgeeks.org/artificial-intelligence/artificial-intelligence-in-robotics/"
                             style='color:white'>Robotics</a></button>
-                    <button class="btn btn-info"><a href="https://www.ibm.com/think/topics/deep-learning"
+                    <button class="btn btn-outline-light"><a href="https://www.ibm.com/think/topics/deep-learning"
                             style='color:white'>Deep Learning</a></button>
                 </div>
             </div>
@@ -210,12 +220,12 @@
                 <img src="image/tech.jpg" class="d-block w-100" style="width:1400px; height: 400px" alt="3">
                 <div class="carousel-caption d-none d-md-block">
                     <h2>Technology and Development</h2>
-                
-                    <button class="btn btn-primary"><a href="https://www.ibm.com/think/topics/machine-learning"
+
+                    <button class="btn btn-outline-light"><a href="https://www.ibm.com/think/topics/machine-learning"
                             style='color: white'>Machine Learning</a></button>
-                    <button class="btn btn-danger"><a href="https://www.geeksforgeeks.org/artificial-intelligence/artificial-intelligence-in-robotics/"
+                    <button class="btn btn-outline-light"><a href="https://www.geeksforgeeks.org/artificial-intelligence/artificial-intelligence-in-robotics/"
                             style='color:white'>Robotics</a></button>
-                    <button class="btn btn-info"><a href="https://www.ibm.com/think/topics/deep-learning"
+                    <button class="btn btn-outline-light"><a href="https://www.ibm.com/think/topics/deep-learning"
                             style='color:white'>Deep Learning</a></button>
                 </div>
             </div>
@@ -231,7 +241,7 @@
         </button>
     </div>
 
-    <div class="container my-4">
+    <div class="container my-5 pt-3">
         <div class="row mb-2">
             <div class="col-md-6">
                 <div
@@ -310,8 +320,6 @@
         <p>© 2026 aITools, Krishma. </p>
     </footer>
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -320,12 +328,6 @@
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
--->
     <script>
         const pages = {
             "home": "/aitoolbootstrap/",
@@ -371,14 +373,12 @@
             });
         });
 
-        // close dropdown when clicking outside
         document.addEventListener("click", function (e) {
             if (e.target !== input) {
                 box.innerHTML = "";
             }
         });
 
-        // optional fallback search submit
         function searchPage() {
             let q = input.value.toLowerCase().trim();
             if (pages[q]) {
